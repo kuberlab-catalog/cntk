@@ -33,12 +33,12 @@ spec:
       {{- if eq .python_version.value "3" }}
       images:
         gpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-gpu-python3.5-cuda8.0-cudnn6.0"
-        cpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}}-cpu-python3.5"
+        cpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-cpu-python3.5"
       {{- end }}
       {{- if eq .python_version.value "2" }}
       images:
         gpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-gpu-python2.7-cuda8.0-cudnn6.0"
-        cpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}}-cpu-python2.7"
+        cpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-cpu-python2.7"
       {{- end }}
       command: python
       args: hello.py
@@ -65,12 +65,12 @@ spec:
     {{- if eq .python_version.value "3"}}
     images:
         gpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-gpu-python3.5-cuda8.0-cudnn6.0"
-        cpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}}-cpu-python3.5"
+        cpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-cpu-python3.5"
     {{- end }}
     {{- if eq .python_version.value "2"}}
     images:
         gpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-gpu-python2.7-cuda8.0-cudnn6.0"
-        cpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}}-cpu-python2.7"
+        cpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-cpu-python2.7"
     {{- end }}
     resources:
       requests:
@@ -101,12 +101,12 @@ spec:
     {{- if eq .python_version.value "3"}}
     images:
         gpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-gpu-python3.5-cuda8.0-cudnn6.0"
-        cpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}}-cpu-python3.5"
+        cpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-cpu-python3.5"
     {{- end }}
     {{- if eq .python_version.value "2"}}
     images:
         gpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-gpu-python2.7-cuda8.0-cudnn6.0"
-        cpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}}-cpu-python2.7"
+        cpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-cpu-python2.7"
     {{- end }}
     workdir: "$SRC_DIR"
     command: python
