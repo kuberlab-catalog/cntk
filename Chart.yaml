@@ -1,0 +1,16 @@
+Description: CNTK template
+Engine: gotpl
+Home: http://kuberlab.com
+Icon: https://storage.googleapis.com/kuberlab-images/CNTK_logo.png
+Keywords:
+- kubernets
+- cntk
+- template
+- kuberlab
+- kuberlabapptemplate
+Maintainers:
+- Email: agunin@kuberlab.com
+  Name: Gunin Alexander
+Name: CNTK
+Version: 1.0.0
+Type: mlapp-v2
