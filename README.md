@@ -1,7 +1,9 @@
-# CNTK ML project
+# Microsoft CNTK
 
-This is an exmple of the CNTK based project.
+This is the base CNTK project.
 
 Conatains:
+
 - Jupyter for interactive development
-- Example of tasks for start training
+
+- Examples of training tasks
