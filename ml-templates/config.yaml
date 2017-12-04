@@ -40,7 +40,7 @@ spec:
         gpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-gpu-python2.7-cuda8.0-cudnn6.0"
         cpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-cpu-python2.7"
       {{- end }}
-      command: python hello.py
+      command: "python hello.py"
       workdir: "$SRC_DIR"
       resources:
         accelerators:
@@ -78,7 +78,6 @@ spec:
       protocol: TCP
       name: http
     default_volume_mapping: true
-    default_mount_path: "/notebooks"
   serving:
   - name: serving
     displayName: Serving
@@ -93,7 +92,7 @@ spec:
         cpu: "kuberlab/mlboard-jupyter-cntk:{{.cntk_version.value}}-cpu-python2.7"
     {{- end }}
     workdir: "$SRC_DIR"
-    command: python hello.py
+    command: "python hello.py"
     resources:
       accelerators:
         gpu: 0
@@ -111,28 +110,28 @@ spec:
     default_volume_mapping: true
   volumes:
   - isLibDir: false
-    mountPath: /workspace/training
+    mountPath: /notebooks/training
     name: training
     clusterStorage: {{ .storage.value }}
     subPath: training
   - gitRepo:
       repository: https://github.com/kuberlab-catalog/cntk
     isLibDir: false
-    mountPath: /workspace/src
+    mountPath: /notebooks/src
     name: src
     subPath: cntk/src
   - isLibDir: true
-    mountPath: /workspace/lib
+    mountPath: /notebooks/lib
     name: lib
     clusterStorage: {{ .storage.value }}
     subPath: lib
   - isLibDir: false
-    mountPath: /workspace/data
+    mountPath: /notebooks/data
     name: data
     clusterStorage: {{ .storage.value }}
     subPath: {{ .data_path }}
   - isLibDir: false
-    mountPath: /workspace/code
+    mountPath: /notebooks
     name: code
     subPath: code
     clusterStorage: {{ .storage.value }}
